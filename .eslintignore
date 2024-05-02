@@ -1,0 +1,6 @@
+/**/*.js
+/**/*.cjs
+node_modules
+/*.config.ts
+dist
+coverage

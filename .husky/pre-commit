@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+# Lint code before commit
+npm run lint
+
+# Run tests before commit
+npm run test
