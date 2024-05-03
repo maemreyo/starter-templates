@@ -16,6 +16,8 @@ Each branch serves as a blueprint for a specific project setup. Here's what you 
 - **Husky & Lint Staged:** Enforces coding standards through pre-commit hooks and linting focused on staged files.
 - **CHANGELOG Generator & Commitlint:** Simplifies creation and maintenance of changelogs and ensures consistent commit messages.
 
+> Note: This is the basic configuration, you should develop them by your taste
+
 **More Templates Coming Soon!**
 
 We're actively adding more branches to cater to various project types and preferences. Your contributions are welcome!
@@ -26,18 +28,24 @@ We're actively adding more branches to cater to various project types and prefer
 2. **Clone the Repository:** Use Git to clone this repository locally:
 
    ```bash
-   git clone https://github.com/your-username/starter-templates.git
+   git clone https://github.com/maemreyo/starter-templates.git
    ```
 
 3. **Navigate to Your Project Directory:** Open your code editor and adjust the `PROJECT_DIR` variable in the `start-project.sh` script to match your preferred project location (e.g., `~/Documents/workspace/dev/projects/`).
 
-4. **Run the Setup Script:** Ensure you have permission to run shell scripts by executing `chmod +x start-project.sh` (assuming you're in the project's root directory). Then, run the script:
+4. **Run the Setup Script:** Assuming you're in the project's root directory, to ensure you have permission to run shell scripts by executing:
+
+   ```bash
+   chmod +x start-project.sh
+   ```
+
+   Then, run the script:
 
    ```bash
    ./start-project.sh
    ```
 
-   Follow the script's prompts to complete the setup.
+Follow the script's prompts to complete the setup.
 
 5. **Voila! Project Ready!** The script creates a new project directory (excluding the `.git` folder). You can then add your own remote URL to manage version control.
 
@@ -46,6 +54,9 @@ We're actively adding more branches to cater to various project types and prefer
 We value your contributions! Here's how you can participate:
 
 - **Create a New Branch:** Propose a new branch for a specific project setup and tooling combination.
+
+  > Note: When creating a new branch, you need to name the branch as this format: `templates/<your-template>` i.e. _**node-ts, next-ts, nest-ts, react-ts, ...**_
+
 - **Enhance Existing Branches:** Improve existing branches by adding functionality or updating dependencies.
 - **Report Issues & Suggest Improvements:** Encounter any issues or have ideas for enhancements? Open an issue on this repository.
 
