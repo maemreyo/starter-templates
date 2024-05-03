@@ -16,7 +16,7 @@ npx json -I -f package.json -e 'this.lintStaged = {
   "*.{js,ts}": "eslint --fix"
 }'
 
-# Create.husky/pre-commit file
+# Create .husky/pre-commit file
 mkdir -p ".husky"
 touch ".husky/pre-commit"
 touch ".husky/commit-msg"
@@ -34,14 +34,14 @@ npm run test
 npx lint-staged" >.husky/pre-commit
 chmod +x.husky/pre-commit
 
-# Create.husky/commit-msg file
+# Create .husky/commit-msg file
 echo "#!/usr/bin/env sh
 
 # Check commit message format
 npx commitizen cz --hook=true" >.husky/commit-msg
 chmod +x.husky/commit-msg
 
-# Create.lintstagedrc.json file
+# Create .lintstagedrc.json file
 echo "{
   \"src/**/*.ts\": [\"npm run lint\", \"git add\"]
 }" >.lintstagedrc.json
@@ -54,6 +54,10 @@ npx husky add.husky/pre-commit
 
 # Add commit-msg script to husky
 npx husky add.husky/commit-msg
+
+# [FIXED] In the terminal, there're some warnings about the husky hooks not being executable.
+# This command will make them executable.
+chmod ug+x .husky/*
 
 # Reminder to run npm install
 echo "Please run 'npm install'."
