@@ -1,6 +1,6 @@
 /**/*.js
 /**/*.cjs
 node_modules
-/*.config.ts
+/*.config.*
 dist
 coverage

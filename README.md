@@ -1,3 +1,16 @@
+# How to use
+
+### Settings
+
+#### Husky
+
+- `cd <project-name>`
+- Get the permission `chmod +x ./scripts/init-husky.sh`
+- Execute the script to initialize the `husky` with this `./scripts/init-husky.sh`
+
+#### 
+
+
 # Available Scripts
 
 - `clean` - remove coverage data, Jest cache and transpiled files.

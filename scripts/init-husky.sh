@@ -8,11 +8,19 @@ npx json -I -f package.json -e 'this.scripts["prepare-commit-msg"] = "husky run 
 npx json -I -f package.json -e 'this.scripts["commit-msg"] = "husky run commit-msg"'
 npx json -I -f package.json -e 'this.scripts["pre-commit"] = "husky run pre-commit"'
 
+# Add lint-staged configuration to package.json
+npx json -I -f package.json -e 'this.lintStaged = {
+  "*.{css,less,scss,html,json,jsx,js}": [
+    "prettier --write."
+  ],
+  "*.{js,ts}": "eslint --fix"
+}'
 
 # Create.husky/pre-commit file
 mkdir -p ".husky"
 touch ".husky/pre-commit"
 touch ".husky/commit-msg"
+touch ".husky/prepare-commit-msg"
 
 echo "#!/usr/bin/env sh
 
@@ -20,7 +28,10 @@ echo "#!/usr/bin/env sh
 npm run lint
 
 # Run tests before commit
-npm run test" >.husky/pre-commit
+npm run test
+
+# Run lint-staged before commit
+npx lint-staged" >.husky/pre-commit
 chmod +x.husky/pre-commit
 
 # Create.husky/commit-msg file

@@ -5,3 +5,6 @@ npm run lint
 
 # Run tests before commit
 npm run test
+
+# Run lint-staged before commit
+npx lint-staged
