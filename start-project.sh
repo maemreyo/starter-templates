@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Constants
-REPO_URL="https://github.com/maemreyo/start-templates.git"
+REPO_URL="https://github.com/maemreyo/starter-templates.git"
 PROJECT_DIR=~/Documents/workspace/dev/projects/
 
 # Functions

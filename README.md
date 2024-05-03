@@ -1,4 +1,4 @@
-## Jumpstart Your Project with `start-templates`
+## Jumpstart Your Project with `starter-templates`
 
 This repository offers a collection of pre-configured project setups, each designed to streamline development for specific technologies and tools. With these templates, you can hit the ground running by creating a new project complete with pre-installed dependencies and automated workflows, saving you valuable time and effort.
 
@@ -26,7 +26,7 @@ We're actively adding more branches to cater to various project types and prefer
 2. **Clone the Repository:** Use Git to clone this repository locally:
 
    ```bash
-   git clone https://github.com/your-username/start-templates.git
+   git clone https://github.com/your-username/starter-templates.git
    ```
 
 3. **Navigate to Your Project Directory:** Open your code editor and adjust the `PROJECT_DIR` variable in the `start-project.sh` script to match your preferred project location (e.g., `~/Documents/workspace/dev/projects/`).
@@ -41,7 +41,7 @@ We're actively adding more branches to cater to various project types and prefer
 
 5. **Voila! Project Ready!** The script creates a new project directory (excluding the `.git` folder). You can then add your own remote URL to manage version control.
 
-### Contributing to `start-templates`
+### Contributing to `starter-templates`
 
 We value your contributions! Here's how you can participate:
 
@@ -51,4 +51,4 @@ We value your contributions! Here's how you can participate:
 
 Please make sure your contributions adhere to good practices and align with the project's overall structure.
 
-This README provides a solid foundation for using `start-templates`. Remember to update branch details and add information for future templates as they become available.
+This README provides a solid foundation for using `starter-templates`. Remember to update branch details and add information for future templates as they become available.
