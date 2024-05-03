@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+# Check commit message format
+npx commitizen cz --hook=true

@@ -1,0 +1,42 @@
+{
+  "name": "next-ts-template",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "next lint",
+    "prepare-commit-msg": "husky run prepare-commit-msg",
+    "commit-msg": "husky run commit-msg",
+    "pre-commit": "husky run pre-commit"
+  },
+  "dependencies": {
+    "next": "14.2.3",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "postcss": "^8",
+    "prettier": "^3.2.5",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
