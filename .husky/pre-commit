@@ -7,4 +7,4 @@ npm run lint
 npm run test
 
 # Run lint-staged before commit
-npx lint-staged
+npx lint-staged --allow-empty

@@ -22,6 +22,14 @@ touch ".husky/pre-commit"
 touch ".husky/commit-msg"
 touch ".husky/prepare-commit-msg"
 
+prepare_commit_msg='#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+exec </dev/tty && npx cz --hook || true
+'
+echo "$prepare_commit_msg" >.husky/prepare-commit-msg
+chmod +x .husky/prepare-commit-msg
+
 echo "#!/usr/bin/env sh
 
 # Lint code before commit
@@ -31,7 +39,7 @@ npm run lint
 npm run test
 
 # Run lint-staged before commit
-npx lint-staged" >.husky/pre-commit
+npx lint-staged --allow-empty" >.husky/pre-commit
 chmod +x.husky/pre-commit
 
 # Create .husky/commit-msg file
