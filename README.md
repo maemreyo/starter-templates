@@ -11,7 +11,7 @@
 #### 
 
 
-# Available Scripts
+## Available Scripts
 
 - `clean` - remove coverage data, Jest cache and transpiled files.
 - `prebuild` - lint source files and tests before building.
@@ -22,4 +22,6 @@
 - `test` - run tests.
 - `test:watch` - interactive watch mode to automatically re-run tests.
 
+## Supportive
 
+<a href="https://www.buymeacoffee.com/maemreyo" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 30px !important;width: 108px !important;" ></a>
