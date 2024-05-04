@@ -1,4 +1,4 @@
-## `next-ts` template
+## `next-ts-cypress` template
 
 This template utilizes various technologies to expedite your project development.
 
@@ -11,7 +11,8 @@ This template utilizes various technologies to expedite your project development
 - ESLint & Prettier - Tools for linting and formatting code, respectively.
 - Commitizen - Streamlines the commit message creation process.
 - Conventional Changelog - Standardizes the format of your project's changelog.
-- Cypress (Comming soon)
+- Cypress (^13.8.1) - Testing your site using E2E and Component tests.
+  > Note: Currently `cypress` is not supported `next ^14.0.0` officially. If you're experiencing problems, downgrade dependencies and restart Cypress.
 
 ## Installation
 
@@ -31,6 +32,25 @@ Husky automates pre-commit hooks to ensure code quality.
    ./scripts/next-husky.sh
    ```
 
+3. Test the process
+   ```bash
+   git add .
+   git commit
+   ```
+   _Note that here we dont need to provide the `-m "Commit message"` because we use another provider to help creating the commit message_
+
+## Available scripts
+
+- **`dev`:** Starts the development server for your Next.js application.
+- **`build`:** Builds an optimized production version of your application.
+- **`start`:** Starts the production server for your application.
+- **`lint`:** Runs code linters to check for stylistic and potential errors in your code.
+- **`cypress`:** Opens the Cypress test runner for visual inspection.
+- **`pre:e2e`:** This script runs before the end-to-end (e2e) tests. It builds and starts the production server to ensure the application is running for testing. e2e testing requires Nextjs running on the production mode.
+- **`test:e2e`:** Runs the e2e tests using Cypress in headless chrome mode. The `--no-exit` flag keeps the Cypress test runner open after the tests finish.
+- **`pre:cpn`:** This script runs before the component tests. It starts the development server.
+- **`test:cpn`:** Runs component tests using Cypress
+
 ## Quick Development
 
 Start the development server for live coding changes:
@@ -38,6 +58,11 @@ Start the development server for live coding changes:
 ```bash
 npm run dev
 ```
+
+## FAQs
+1. My E2E test always throws an error when running.
+
+Double check if you're running the production server. Because of this [note](https://nextjs.org/docs/app/building-your-application/testing/cypress#running-e2e-tests), it recommended that you need to run the production server first before running the Cypress tests.
 
 ## Contribution
 

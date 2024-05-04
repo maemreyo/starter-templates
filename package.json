@@ -1,16 +1,20 @@
 {
-  "name": "next-ts-template",
+  "name": "next-ts-cypress-template",
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "prepare-commit-msg": "husky run prepare-commit-msg",
+    "commit-msg": "husky run commit-msg",
+    "pre-commit": "husky run pre-commit",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
     "test": "next lint",
-    "prepare-commit-msg": "husky run prepare-commit-msg",
-    "commit-msg": "husky run commit-msg",
-    "pre-commit": "husky run pre-commit"
+    "cypress": "cypress open",
+    "pre:e2e": "next build && next start",
+    "test:e2e": "cypress run --browser chrome --headed chrome --no-exit",
+    "pre:cpn": "next dev",
+    "test:cpn": "next dev & cypress run --browser chrome --headed chrome --component --no-exit"
   },
   "dependencies": {
     "next": "14.2.3",
@@ -24,6 +28,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "commitizen": "^4.3.0",
+    "cypress": "^13.8.1",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
