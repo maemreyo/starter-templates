@@ -29,7 +29,7 @@ pre_commit='#!/usr/bin/env sh
 npm run test
 
 # Run lint-staged before commit
-npx lint-staged
+npx lint-staged --allow-empty
 '
 echo "$pre_commit" >.husky/pre-commit
 chmod +x .husky/pre-commit
@@ -93,7 +93,8 @@ echo -e "${YELLOW}Creating .lintstagedrc.json file...${NC}"
 # Create .lintstagedrc.json file
 echo "{
   \"*.{css,less,scss,html,json,jsx,js}\": [\"prettier --write\"],
-  \"*.{js,ts,tsx}\": \"eslint --fix\"
+  \"*.{js,ts,tsx}\": \"eslint --fix\",
+  \"*\": \"git add\"
 }" >.lintstagedrc.json
 
 echo -e "${GREEN}Installing Husky locally...${NC}"
